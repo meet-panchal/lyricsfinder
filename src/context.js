@@ -21,7 +21,7 @@ export class Provider extends Component {
         dispatch: action => this.setState(state => reducer(state, action))
     }
     componentDidMount(){
-        axios.get('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=in&f_has_lyrics=1&apikey=a30c2eed6dfac8f1175d1572dc9a78c0')
+        axios.get('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=in&f_has_lyrics=1&apikey={Your API Key}')
         .then(res => {
             //console.log(res.data)
             this.setState({
